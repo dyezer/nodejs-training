@@ -1,11 +1,12 @@
 const express = require('express')
 const app = express()
 
-import myModules from './exx/use-modules/index'
-myModules.useModules()
+/* use modules */
+//import myModules from './exx/use-modules/'
+//myModules.useModules()
 
-app.get('/', (req, res) => {
-  res.send('hi!express')
-})
+/* routes */
+app.use('/', require('./routes'))
+app.use('/upload', require('./routes/upload'))
 
 export default app
