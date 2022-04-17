@@ -1,11 +1,7 @@
 const express = require('express')
 const app = express()
 
-app.use(function (req, res, next) {
-  res.locals.baseURL = __dirname
-  next()
-})
-
+app.use(express.static('app/public'))
 
 /* use modules */
 //import myModules from './exx/use-modules/'
