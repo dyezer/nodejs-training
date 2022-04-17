@@ -6,7 +6,7 @@ const app = express()
 //myModules.useModules()
 
 /* routes */
-app.use('/', require('./routes'))
 app.use('/upload', require('./routes/upload'))
+app.use('/', require('./routes'))
 
 export default app
