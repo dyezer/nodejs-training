@@ -1,7 +1,9 @@
-const files = {
+module.exports.files = {
   storage: () => {
-    return 'file.tmp'
+    return 'new-file.tmp'
+  },
+
+  allowedFiles: (req, res) => {
+    return 25
   }
 }
-
-module.exports = files
